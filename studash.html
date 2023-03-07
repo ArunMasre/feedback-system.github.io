@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <a href="#">Home</a>
+        <a href="studentlogin.html">Logout</a>
+    </header>
+    <section>
+        <h1>Welcome in student Dashboard</h1>
+        <br>
+        <br>
+        <center>
+            <hr>
+            <br>
+            <h1>FeedBack Submission Form</h1>
+            <br>
+            <form action="FeedSer" method="post">
+                <hr>
+                <br>
+                <input type="text" name="txtbacth" placeholder="Enter Batchname">
+                <br>
+                <br>
+                <input type="text" name="txtname" placeholder="Enter Facultyname">
+                <br>
+                <br>
+                <input type="text" name="txtdesc" placeholder="Enter Description">
+                <br>
+                <br>
+                <input type="number" name="txtrate" placeholder="FeedBack rate ex. 1,2,3...10 ">
+                <br>
+                <br>
+                <input type="submit" value="submit">
+
+            </form>
+
+            <%
+
+            if(request.getParameter("s")!=null)
+            {
+                out.print(request.getParameter("s"));
+            }
+            >%
+            <br>
+            <a href="viewfeed.html">view FeedBack here</a>
+        </center>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
